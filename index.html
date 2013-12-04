@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>slideImage</title>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<style type="text/css">
+	.fade_pic {
+		overflow:hidden;
+		position: relative;
+		width: 500px;
+		height: 522px;
+	}
+	.fade_pic a.ad {
+		position: absolute;	/* 讓圖片疊在一起 */
+		text-decoration: none;
+		color: black;
+	}
+	.fade_pic .control {
+		position: absolute;
+		right: 10px;
+		bottom: 30px;
+	}
+	.fade_pic .control a {
+		display: inline-block;
+		padding: 3px;
+		margin: 0 3px;
+		width: 16px;
+		color: #fff;
+		background: #000;
+		text-align: center;
+		font-size: 12px;
+		text-decoration: none;
+	}
+	.fade_pic .control a.on {
+		font-weight: bold;
+		color: #f00;
+	}
+	.fade_pic .flash_title {
+		text-align: center;
+		display: block;
+	}
+	.fade_pic a img {
+		border: 1px solid #ccc;
+	}
+	.nailthumb-container {
+		border: 1px solid #ccc;
+		box-sizing: border-box;
+	}
+</style>
+
+</head>
+<body>
+	<!--
+	<div>
+		<span>參數設置</span>
+		寬度: <input type="text">
+		高度: <input type="text">
+	</div>
+	<button id="setting">ok</button>-->
+	<div class="fade_pic test1">
+		<a href="http://abgne.tw" class="ad"><img src="g01.jpg" />
+		<span class="flash_title">1</span>
+		</a>
+		<a href="http://tw.yahoo.com" class="ad"><img src="g02.jpg" />
+		<span class="flash_title">2</span>
+		</a>
+		<a href="http://www.google.com" class="ad"><img src="g03.jpg" />
+		<span class="flash_title">3</span>
+		</a>
+		<div class="control"></div>
+	</div>
+
+	<div class="fade_pic test2">
+		<a href="http://abgne.tw" class="ad"><img src="g01.jpg" />
+		<span class="flash_title">1</span>
+		</a>
+		<a href="http://tw.yahoo.com" class="ad"><img src="g02.jpg" />
+		<span class="flash_title">2</span>
+		</a>
+		<a href="http://www.google.com" class="ad"><img src="g03.jpg" />
+		<span class="flash_title">3</span>
+		</a>
+		<div class="control"></div>
+	</div>
+
+	<div class="fade_pic test3">
+		<a href="http://abgne.tw" class="ad"><img src="g01.jpg" />
+		<span class="flash_title">1</span>
+		</a>
+		<a href="http://tw.yahoo.com" class="ad"><img src="g02.jpg" />
+		<span class="flash_title">2</span>
+		</a>
+		<a href="http://www.google.com" class="ad"><img src="g03.jpg" />
+		<span class="flash_title">3</span>
+		</a>
+		<div class="control"></div>
+	</div>
+	<script type="text/javascript" src="flashTag.js"></script>
+	<script type="text/javascript" src="jquery.nailthumb.1.1.min.js"></script>
+	<script>
+		$('.test1').slideImage({width: 500, height: 200});
+		$('.test2').slideImage({width: 200, height: 200});
+		$('.test3').slideImage({width: 350, height: 350});
+	</script>
+</body>
+</html>
